@@ -2,6 +2,9 @@ import { ThemeProvider } from "./context/ThemeContext"
 import ThemeText from './components/ThemeText'
 import ToggleButton from "./components/ToggleButton"
 import ThemeContainer from "./components/ThemeContainer"
+import { LoginProvider } from "./context/LoginContext"
+import UserInfo from "./components/UserInfo"
+import LoginButton from "./components/LoginButton"
 
 const App = () => {
   return (
@@ -12,6 +15,11 @@ const App = () => {
               <ToggleButton />
           </ThemeContainer>
       </ThemeProvider>
+
+      <LoginProvider>
+        <UserInfo />
+        <LoginButton />
+      </LoginProvider>
     </div>
   )
 }
